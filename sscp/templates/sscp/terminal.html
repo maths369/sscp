@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8">
+		{% load staticfiles %}
+		<link rel="stylesheet" href="{% static 'sscp/css/bootstrap.min.css' %}"/>
+		<link rel="stylesheet" href="{% static 'sscp/css/bootstrap-theme.min.css' %}"/>
+		<link rel="stylesheet" href="{% static 'sscp/js/jquery.min.js' %}"/>
+		<link rel="stylesheet" href="{% static 'sscp/js/bootstrap.min.js' %}"/>
+	</head>
+
+	<body>
+		<div class="jumbotron">
+			<div class="container">
+  				<h3>{{message}}</h3>
+  			</div>
+		</div>
+		<div class="row">
+		  <div class="col-xs-6 col-md-3">
+	        <a href="#" class="thumbnail">
+	          <img src="{% static 'sscp/images/films.png' %}" alt="Generic placeholder thumbnail">
+	        </a>
+	      </div>
+	      <div class="col-xs-6 col-md-3">
+	        <a href="#" class="thumbnail">
+	          <img src="{% static 'sscp/images/films.png' %}" alt="Generic placeholder thumbnail">
+	        </a>
+	      </div>
+	      <div class="col-xs-6 col-md-3">
+	        <a href="#" class="thumbnail">
+	          <img src="{% static 'sscp/images/films.png' %}" alt="Generic placeholder thumbnail">
+	        </a>
+	      </div>
+	      <div class="col-xs-6 col-md-3">
+	        <a href="#" class="thumbnail">
+	          <img src="{% static 'sscp/images/films.png' %}" alt="Generic placeholder thumbnail">
+	        </a>
+		  </div>
+		</div>		
+	</body>
+</html>

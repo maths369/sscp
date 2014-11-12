@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		{% load staticfiles %}
+		<title>{% block title %}Print Kiosk{% endblock %}</title>
+	</head>
+
+	<body>
+		<!-- Bar -->
+		{% block branding %}{% endblock %}
+		<!-- END Bar -->
+		<!-- Content -->
+		{% block body_content %}{% endblock %}
+		<!-- END Content -->
+
+        <!-- load static files -->
+        <link rel="stylesheet" href="{% static 'sscp/css/bootstrap.min.css' %}"/>
+        <link rel="stylesheet" href="{% static 'sscp/css/bootstrap-theme.min.css' %}"/>
+        <script src="{% static 'sscp/js/angular.js' %}"></script>
+        <script src="{% static 'sscp/js/script.js' %}"></script>
+	</body>
+	
+	<footer>
+		<hr>
+		<div class="container">
+			{% block foot_content %}{% endblock %}
+		</div>
+	</footer>
+</html>

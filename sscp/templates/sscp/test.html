@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+{% load staticfiles %}
+{% verbatim %}
+<div ng-app="detail.app" ng-controller="appController">
+	<div class="row">
+        <div class="col-md-3">
+            <div class="well sidebar-nav">
+                  <ul class="nav nav-list">
+                      <li class="nav-header">Films</li>
+                          <li ng-repeat="film in films">
+                              <a href="#">Film - {{ film.patient_id }}</a>
+                          </li>
+                  </ul>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <img src="{{image.path}}">
+        </div>
+        <div class="col-md-4">
+                <form class="navbar-form navbar-right" role="search" action='/sscp/detail/'>
+                    <select name="date" class="form-control">
+                        <option value="0">检查编号</option>
+                        <option value="1">病人编号</option>
+                        <option value="2">病人姓名</option>
+                    </select>
+                    <div class="form-group">
+                        <input name="search" type="text" class="form-control" placeholder="查询">
+                    </div>
+                    <button type="submit" class="btn btn-default">确定</button>
+                </form>
+        </div>
+    </div>
+</div>
+{% endverbatim %}
+
+<link rel="stylesheet" href="{% static 'sscp/css/bootstrap.min.css' %}"/>
+<link rel="stylesheet" href="{% static 'sscp/css/bootstrap-theme.min.css' %}"/>
+<script src="{% static 'sscp/js/angular.js' %}"></script>
+<script src="{% static 'sscp/js/script.js' %}"></script>
+
+</body>
+</html>
